@@ -4750,17 +4750,10 @@ public class GTDocumento {
                             public void setTotalMontoImpuesto(BigDecimal value) {
                                 this.totalMontoImpuesto = value;
                             }
-
                         }
-
                     }
-
                 }
-
             }
-
         }
-
     }
-
 }
