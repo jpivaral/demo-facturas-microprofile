@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
 	version="2.2">
-     <persistence-unit name="pu_facturas" transaction-type="JTA">
+     <persistence-unit name="pu_facturas" transaction-type="RESOURCE_LOCAL">
      	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <jta-data-source>java:app/jdbc/facturasDataSource</jta-data-source>
         <properties>

@@ -51,12 +51,12 @@ public class UploadService {
 				    	var jaxbContext = JAXBContext.newInstance(com.pivaral.facturas.model.sat.v2.GTDocumento.class);
 					    var unmarshaller = jaxbContext.createUnmarshaller();
 					    var document = (com.pivaral.facturas.model.sat.v2.GTDocumento) unmarshaller.unmarshal(reader);
-					    return Response.ok(document).build();
+					    return Response.ok(document.convertToFactura()).build();
 				    } else {
 				    	var jaxbContext = JAXBContext.newInstance(GTDocumento.class);            
 						var jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 						var document = (GTDocumento) jaxbUnmarshaller.unmarshal(reader);
-						return Response.ok(document).build();
+						return Response.ok(document.convertToFactura()).build();
 				    }
 				} catch (JAXBException ex) {
 					ex.printStackTrace();

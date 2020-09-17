@@ -1,6 +1,7 @@
 package com.pivaral.facturas.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table
-public class Compra implements Serializable {
+public class Factura implements Serializable {
 	
 	@Id
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
@@ -29,9 +30,9 @@ public class Compra implements Serializable {
 	@Column(columnDefinition = "DATE")
 	private LocalDate fechaFactura;
 	private String descripcion;
-	private Double valorBien;
-	private Double valorServicios;
-	private Double valorCombustible;
-	private Double valorActivos;
+	private BigDecimal valorBien;
+	private BigDecimal valorServicios;
+	private BigDecimal valorCombustible;
+	private BigDecimal valorActivos;
 
 }
